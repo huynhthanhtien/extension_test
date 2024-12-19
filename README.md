@@ -1,24 +1,3 @@
-
-```
-MyApp
-├─ README.md.
-├─ js
-├─ manifest.json
-├─ options
-└─ popup
-
-```
-
-lsalkjdlksja
-djsklajd
-kjsklajd
-kljdasklj
-kjdslkaj
-jkdsalkj
-ldjsalkj
-jdlasjkljd
-jsdlkajd;k
-
 ```
 MyApp
 ├─ README.md
@@ -28,8 +7,12 @@ MyApp
 │  ├─ icon32.png
 │  └─ icon48.png
 ├─ js
+│  ├─ background.js
+│  ├─ codejs.js
+│  └─ content.js
 ├─ manifest.json
 ├─ options
+│  └─ options.html
 └─ popup
    ├─ popup.css
    ├─ popup.html
