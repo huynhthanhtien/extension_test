@@ -1,0 +1,58 @@
+{
+    "manifest_version": 3,
+    "name": "MyApp",
+    "version": "1.0",
+    "description": "A simple Chrome extension example for MyApp.",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "declarativeNetRequest",
+        "scripting",
+        "tabs",
+        "identity",
+        "identity.email",
+        "webNavigation",
+        "notifications"
+    ],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "icon/icon16.png",
+            "32": "icon/icon32.png",
+            "48": "icon/icon48.png",
+            "128": "icon/icon128.png"
+        }
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["js/codejs.js"],
+            "matches": ["https://thongtindaotao.sgu.edu.vn/*"]
+        }
+    ],
+
+    "icons": {
+        "16": "icon/icon16.png",
+        "32": "icon/icon32.png",
+        "48": "icon/icon48.png",
+        "128": "icon/icon128.png"
+    },
+    "background": {
+        "service_worker": "js/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://thongtindaotao.sgu.edu.vn/*"
+            ],
+            "js": [
+                "js/content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "host_permissions": [
+        "https://www.googleapis.com/*",
+        "*://*/*" 
+    ],
+    "options_page": "options/options.html"
+}

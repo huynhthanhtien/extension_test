@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 18px;
+  }
+  
+  #loginButton {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #loginButton:hover {
+    background-color: #45a049;
+  }
+  
+  #status {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
