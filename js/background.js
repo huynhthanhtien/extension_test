@@ -241,11 +241,12 @@ async function events(json, id, token) {
     const date = json.tkb;
     const gv = json.gv;
 
-    const regex = /(\d{2})\/(\d{2})\/(\d{4})/g;
+    const regex = /(\d{2})\/(\d{2})\/(\d{2})/g;
     const arrr = date.match(regex);
-    // // console.log(arrr);
-    const startDate = new Date(arrr[0].replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$3-$2-$1'));
-    const endDate = new Date(arrr[1].replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$3-$2-$1'));
+    // console.log(date);
+    // console.log(arrr);
+    const startDate = new Date(arrr[0].replace(/(\d{2})\/(\d{2})\/(\d{2})/, '20$3-$2-$1'));
+    const endDate = new Date(arrr[1].replace(/(\d{2})\/(\d{2})\/(\d{2})/, '20$3-$2-$1'));
 
 
     let newdate = startDate;
@@ -305,8 +306,10 @@ async function xulydata(jsonResponse) {
         for (const item of jsonResponse.data.ds_nhom_to) {
             await events(item, id, token); // Đảm bảo đợi sự kiện được thêm vào trước khi tiếp tục
         }
+        showNotification('Đã thêm sự kiện xong!');
     } catch (error) {
         console.error('Lỗi:', error);
+        showNotification("Lỗi khi thêm sự kiện");
     }
 };
 
