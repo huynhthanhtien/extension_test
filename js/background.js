@@ -238,7 +238,7 @@ async function events(json, id, token) {
     const tkt = parseInt(json.tbd) + parseInt(json.so_tiet) - 1;
     // const sotiet = json.so_tiet;
     const nhom_to = json.nhom_to;
-    const date = json.tooltip;
+    const date = json.tkb;
     const gv = json.gv;
 
     const regex = /(\d{2})\/(\d{2})\/(\d{4})/g;
