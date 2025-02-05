@@ -26,7 +26,7 @@
     "web_accessible_resources": [
         {
             "resources": ["js/codejs.js"],
-            "matches": ["https://thongtindaotao.sgu.edu.vn/*"]
+            "matches": ["https://thongtindaotao.sgu.edu.vn/*", "https://tienichsv.ou.edu.vn/*"]
         }
     ],
 
@@ -42,7 +42,8 @@
     "content_scripts": [
         {
             "matches": [
-                "https://thongtindaotao.sgu.edu.vn/*"
+                "https://thongtindaotao.sgu.edu.vn/*",
+                "https://tienichsv.ou.edu.vn/*"
             ],
             "js": [
                 "js/content.js"
